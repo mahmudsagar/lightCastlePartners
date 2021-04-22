@@ -1,0 +1,34 @@
+.aboutLCPartners{
+    background: $lightRedishBrown;
+
+    &__container{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+    }
+    &__detail{
+        h2{
+            font-weight: 800;
+            text-transform: capitalize;
+        }
+        p{
+            font-size: 1rem;
+            color: $lightGrey;
+        }
+    }
+    &__stat{
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        grid-gap: 1rem;
+        p{
+            margin: 0;
+            font-size: $font-sm;
+        }
+    }
+    &__stat-card{
+        background-color: $geryisWhite;
+        padding: .4rem;
+        text-align: center;
+
+        
+    }
+}

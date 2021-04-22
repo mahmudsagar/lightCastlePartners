@@ -1,0 +1,43 @@
+.news {
+  background: $lightRedishBrown;
+  &__container {
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 1.25rem;
+    grid-column-gap: 1.5rem;
+    justify-items: center;
+
+    @include breakpoint-down(small) {
+      grid-template-columns: repeat(1, auto);
+    }
+  }
+  //   latest news car
+  &__card {
+    background: $geryisWhite;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-column-gap: 0.8rem;
+    align-items: center;
+    border-radius: 0.5rem;
+  }
+  // news card image
+  &__card-img {
+    border-radius: 0.5rem 0 0 0.5rem;
+    width: 11.5625rem;
+    height: 11.125rem;
+  }
+  // latest news card body
+  &__card-body {
+    padding: 0.6rem;
+    > small {
+      color: $lightGrey;
+      font-size: 1rem;
+    }
+    > p {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

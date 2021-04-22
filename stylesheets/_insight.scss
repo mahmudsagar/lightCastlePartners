@@ -1,0 +1,104 @@
+.insight {
+    &__container {
+        grid-template-columns: 2fr 1fr;
+        grid-column-gap: 1.5rem;
+        @include breakpoint-down(small) {
+            grid-template-columns: none;
+            grid-row-gap: 1rem;
+        }
+    }
+    &__focal {
+        background-image: url("../../images/Mask\ Group\ 1.png");
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+        display: grid;
+        padding: 1rem;
+    }
+    &__focal-container {
+        width: 60%;
+        background-color: $geryisWhite;
+        padding: 0.8rem;
+        justify-self: center;
+        align-self: center;
+        border-radius: 0.5rem;
+        transform: translate(-3px, 0);
+        box-shadow: 4px 5px 14px 3px $lightRedishBrown;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            box-shadow: none;
+            transform: translate(3px, 0);
+        }
+        .focal-heading {
+            small {
+                color: $redishBrown;
+                font-size: $font-sm;
+            }
+            h3 {
+                font-weight: 600;
+            }
+        }
+        .focal-detail {
+            p {
+                font-size: 1rem;
+            }
+            a {
+                color: $blue;
+                text-transform: capitalize;
+                font-size: 1rem;
+                display: inline-block;
+                transition: all 0.2s ease-in-out;
+                &:hover {
+                    color: $redishBrown;
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+    &__card-container {
+        display: grid;
+        grid-row-gap: 1rem;
+    }
+    &__card {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        background: $geryisWhite;
+        border-radius: 0.5rem;
+        box-shadow: 3px 3px 7px 0px $lightRedishBrown;
+        transform: translateY(-3px);
+        transition: all 0.2s ease-in-out;
+        font-weight: 800;
+        &:hover {
+            box-shadow: none;
+            transform: translateY(3px);
+        }
+    }
+
+    &__card-img {
+        img {
+            width: 5.625rem;
+            min-height: 100%;
+            border-radius: 0.5rem 0 0 0.5rem;
+
+            @include breakpoint-down(small){
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    &__card-body {
+        padding: 0.4rem 0.5rem;
+        small {
+            font-size: $font-sm;
+            color: $redishBrown;
+        }
+        a {
+            font-size: 1rem;
+            display: block;
+            color: $darkGrey;
+            &:hover {
+                color: $blue;
+            }
+        }
+    }
+}
