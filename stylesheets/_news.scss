@@ -33,11 +33,16 @@
       color: $lightGrey;
       font-size: 1rem;
     }
-    > p {
+    > a {
+      display: block;
+      color: $darkGrey;
       font-size: 1.25rem;
       font-weight: 700;
       margin: 0;
       padding: 0;
+      &:hover{
+        color: $blue;
+      }
     }
   }
 }
