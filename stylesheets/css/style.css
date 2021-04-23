@@ -247,6 +247,13 @@ button,
   grid-gap: 1rem;
 }
 
+@media (max-width: 48rem) {
+  .aboutLCPartners__container {
+    -ms-grid-columns: none;
+        grid-template-columns: none;
+  }
+}
+
 .aboutLCPartners__detail h2 {
   font-weight: 800;
   text-transform: capitalize;

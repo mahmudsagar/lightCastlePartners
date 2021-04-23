@@ -4,6 +4,9 @@
     &__container{
         grid-template-columns: 1fr 1fr;
         grid-gap: 1rem;
+        @include breakpoint-down(small){
+            grid-template-columns: none;
+        }
     }
     &__detail{
         h2{
