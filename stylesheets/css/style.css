@@ -243,6 +243,7 @@ button,
 }
 
 .header {
+  position: relative;
   background: url("../../images/Background.png") no-repeat;
 }
 
@@ -550,10 +551,88 @@ button,
 
 .header .hero__container {
   position: relative;
+  margin-bottom: 5rem;
+}
+
+.header .hero__container::after {
+  content: '';
+  width: 21rem;
+  height: 21rem;
+  display: block;
+  background: url("../../images/Landing-Banner-1-100x50.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  position: absolute;
+  top: 10%;
+  right: 10%;
 }
 
 .header .hero__text-body {
-  color: #617d98;
+  color: #f9f6f6;
+  width: 30rem;
+  padding: 2rem;
+}
+
+.header .hero__text-body h2 {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.header .hero__text-body p {
+  margin: 0;
+  font-size: 2.25rem;
+  font-weight: 300;
+}
+
+.header .hero__btn-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 3rem;
+  margin-top: 3rem;
+}
+
+.header .hero__btn {
+  color: #dae2ec;
+  padding: .8rem 1.125rem;
+  border: 1px solid #9eb2c7;
+  -webkit-transition: all ease .3s;
+  transition: all ease .3s;
+}
+
+.header .hero__btn:hover {
+  background-color: #829ab0;
+  color: #dae2ec;
+  border: 1px solid #e37835;
+}
+
+.header .hero__page-map {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.header .hero__page-map-container {
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  max-width: 90rem;
+  margin: auto;
+}
+
+.header .hero__page-map-btn {
+  padding: 3rem 5rem;
+  display: inline-block;
+  color: #f1f5f8;
+  background-color: #6f6b67;
 }
 
 .aboutLCPartners {
