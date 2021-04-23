@@ -5,12 +5,15 @@
         grid-template-columns: 1fr 1fr;
         justify-items: center;
 
-        @include breakpoint-down(small){
+        @include breakpoint-down(small) {
             grid-template-columns: none;
         }
     }
     &__banner {
         position: relative;
+        img {
+            width: 100%;
+        }
         &::after {
             content: "";
             width: 100%;
@@ -40,12 +43,21 @@
         border-radius: 5px;
         display: grid;
         grid-template-columns: 2fr 1fr;
+        @include breakpoint-down(ex-small) {
+            grid-template-columns: none;
+            background-color: transparent;
+            grid-gap: 0.8rem;
+        }
 
         input {
             padding: 0.8rem;
             color: $geryisWhite;
-            &::placeholder{
+            &::placeholder {
                 color: $geryisWhite;
+            }
+            @include breakpoint-down(ex-small) {
+                background-color: hsla(23, 76%, 55%, 0.753);
+                border-radius: 5px;
             }
         }
 
@@ -54,9 +66,13 @@
             width: 100%;
             height: 100%;
             color: $darkGrey;
-            font-size: .8rem;
+            font-size: 0.8rem;
             font-weight: 600;
             border-radius: 0 5px 5px 0;
+            @include breakpoint-down(ex-small) {
+                border-radius: 5px;
+                padding: .2rem;
+            }
         }
     }
 
@@ -71,11 +87,19 @@
     &__timer-container {
         grid-template-columns: repeat(4, auto);
         grid-gap: 1rem;
+        @include breakpoint-down(ex-small) {
+            grid-template-columns: repeat(2, auto);
+        }
     }
     &__timer-body {
         border: 1px solid $darkGrey;
         width: 5rem;
         height: 5rem;
+        h4 {
+            @include breakpoint-down(ex-small) {
+                margin: 5px 0;
+            }
+        }
         span {
             font-size: 1rem;
         }

@@ -1,37 +1,45 @@
-.aboutLCPartners{
+.aboutLCPartners {
     background: $lightRedishBrown;
 
-    &__container{
+    &__container {
         grid-template-columns: 1fr 1fr;
         grid-gap: 1rem;
-        @include breakpoint-down(small){
+        @include breakpoint-down(small) {
             grid-template-columns: none;
         }
     }
-    &__detail{
-        h2{
+    &__detail {
+        @include breakpoint-down(ex-small) {
+            width: 90%;
+        }
+        h2 {
             font-weight: 800;
             text-transform: capitalize;
         }
-        p{
+        p {
             font-size: 1rem;
             color: $lightGrey;
+            @include breakpoint-down(ex-small) {
+                width: 85%;
+            }
         }
     }
-    &__stat{
+    &__stat {
         grid-template-columns: repeat(3, 1fr);
         align-items: center;
         grid-gap: 1rem;
-        p{
+        @include breakpoint-down(ex-small) {
+            grid-template-columns: none;
+            justify-items: center;
+        }
+        p {
             margin: 0;
             font-size: $font-sm;
         }
     }
-    &__stat-card{
+    &__stat-card {
         background-color: $geryisWhite;
-        padding: .4rem;
+        padding: 0.4rem;
         text-align: center;
-
-        
     }
 }

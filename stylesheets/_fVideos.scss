@@ -1,83 +1,90 @@
 .fVideos {
-  background: $lightRedishBrown;
-  &__container {
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 1.5rem;
-    justify-items: center;
-    @include breakpoint-down(small){
-        grid-template-columns: repeat(1, auto);
-    }
-  }
-  &__card {
-    .video{
-        position: fixed;
-        width: 100%;
-        background: hsla(34, 89%, 4%, 0.514);
-        height: 100%;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        opacity: 0;
-        transition: all ease 500ms;
-        iframe{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        i{
-            position: absolute;
-            right: 5%;
-            font-size: 3rem;
-            cursor: pointer;
+    background: $lightRedishBrown;
+    &__container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 1.5rem;
+        justify-items: center;
+        @include breakpoint-down(small) {
+            grid-template-columns: repeat(1, auto);
+            padding: 0 0.4rem;
         }
     }
-    .open-video{
-        z-index: 1111;
-        opacity: 1;
-    }
-    .video_image {
-    //   width: 17.5rem;
-      position: relative;
-      margin: 0 auto;
-      img {
-        width: 100%;
-        height: 100%;
-        border-radius: .5rem;
-      }
-      .image-overlay {
-        color: $geryisWhite;
-        font-weight: 800;
-        position: absolute;
-        border-radius: .5rem;
-        top: 0;
-        left: 0%;
-        width: 100%;
-        height: 97%;
-        background-color: hsla(231, 45%, 46%, 0.253);
-        cursor: pointer;
-        i {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, 50%);
-          font-size: 1.3rem;
-          &::before {
-            animation: pulse-border 1500ms ease-out infinite;
-          }
+    &__card {
+        .video {
+            position: fixed;
+            width: 100%;
+            background: hsla(34, 89%, 4%, 0.514);
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            opacity: 0;
+            transition: all ease 500ms;
+            iframe {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            i {
+                position: absolute;
+                right: 5%;
+                font-size: 3rem;
+                cursor: pointer;
+            }
         }
-      }
+        .open-video {
+            z-index: 1111;
+            opacity: 1;
+        }
+        .video_image {
+            //   width: 17.5rem;
+            position: relative;
+            margin: 0 auto;
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 0.5rem;
+            }
+            .image-overlay {
+                color: $geryisWhite;
+                font-weight: 800;
+                position: absolute;
+                border-radius: 0.5rem;
+                top: 0;
+                left: 0%;
+                width: 100%;
+                height: 97%;
+                background-color: hsla(231, 45%, 46%, 0.253);
+                cursor: pointer;
+                i {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, 50%);
+                    font-size: 1.3rem;
+                    &::before {
+                        animation: pulse-border 1500ms ease-out infinite;
+                    }
+                }
+            }
+        }
     }
-  }
-  &__card-body{
-      text-transform: capitalize;
-    >h3{
-        font-size: $font-med;
-        font-weight: 600;
+    &__card-body {
+        text-transform: capitalize;
+        @include breakpoint-down(small) {
+            text-align: center;
+        }
+        > h3 {
+            font-size: $font-med;
+            font-weight: 600;
+        }
+        > p {
+            font-size: $font-sm;
+            width: 80%;
+            @include breakpoint-down(small) {
+                width: 100%;
+            }
+        }
     }
-    >p{
-        font-size: $font-sm;
-        width: 80%;
-    }
-  }
 }
