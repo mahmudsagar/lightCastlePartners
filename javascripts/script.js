@@ -108,6 +108,69 @@ about.addEventListener("click", (e) => {
 
 // services section ends
 
+// clients slider starts
+let clientsSlide = document.querySelectorAll(".clients__slide");
+let dots = document.querySelectorAll(".indicator");
+let before = document.querySelector(".before");
+let id = 0;
+let last = clientsSlide.length - 1;
+let after = id + 1;
+function next() {
+    if (id == clientsSlide.length - 1) {
+        id = 0;
+        last = clientsSlide.length - 1;
+        after = 1;
+    } else {
+        id++;
+        after = id + 1;
+        last = id - 1;
+    }
+    let second = (clientsSlide[id].style.display = "block");
+    let prev = (clientsSlide[last].style.display = "none");
+    dots[id].style.background = "dimgray";
+    dots[last].style.background = "darkgray";
+    displayPrev(clientsSlide, last);
+    displayNext(clientsSlide, after);
+}
+function prev() {
+    if (id != 0) {
+        id--;
+        after = id - 1;
+        last = id + 1;
+    } else {
+        id = clientsSlide.length - 1;
+        after = 4;
+        last = 0;
+    }
+    let next = (clientsSlide[id].style.display = "block");
+    let prev = (clientsSlide[last].style.display = "none");
+    dots[id].style.background = "dimgray";
+    dots[last].style.background = "darkgray";
+    displayPrev(clientsSlide, after);
+    displayNext(clientsSlide, last);
+}
+function displayPrev(clientsSlide, id) {
+    let a = id == -1 ? 5 : id;
+    document.querySelector(".before").innerHTML = clientsSlide[a].innerHTML;
+}
+function displayNext(clientsSlide, id) {
+    let a = id == clientsSlide.length ? 0 : id;
+    document.querySelector(".after").innerHTML = clientsSlide[a].innerHTML;
+}
+function makeElement(clientsSlide) {
+    var before = document.createElement("div");
+    before.innerHTML = clientsSlide[clientsSlide.length - 1].innerHTML;
+    before.setAttribute("class", "before");
+    var after = document.createElement("div");
+    after.innerHTML = clientsSlide[1].innerHTML;
+    after.setAttribute("class", "after");
+    var parent = document.querySelector(".slider");
+    parent.append(before, after);
+}
+makeElement(clientsSlide);
+console.log(slide);
+// clients slider ends
+
 // video section start
 const video = document.querySelectorAll(".video");
 const videoBtn = document.querySelectorAll(".image-overlay");
