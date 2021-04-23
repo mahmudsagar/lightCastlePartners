@@ -4,6 +4,10 @@
     &__container {
         grid-template-columns: 1fr 1fr;
         justify-items: center;
+
+        @include breakpoint-down(small){
+            grid-template-columns: none;
+        }
     }
     &__banner {
         position: relative;
@@ -70,9 +74,9 @@
     }
     &__timer-body {
         border: 1px solid $darkGrey;
-        width: 7rem;
-        height: 7rem;
-        .timer--text {
+        width: 5rem;
+        height: 5rem;
+        span {
             font-size: 1rem;
         }
     }

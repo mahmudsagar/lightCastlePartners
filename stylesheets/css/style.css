@@ -536,6 +536,13 @@ button,
   justify-items: center;
 }
 
+@media (max-width: 48rem) {
+  .countdown__container {
+    -ms-grid-columns: none;
+        grid-template-columns: none;
+  }
+}
+
 .countdown__banner {
   position: relative;
 }
@@ -627,11 +634,11 @@ button,
 
 .countdown__timer-body {
   border: 1px solid #2e2929;
-  width: 7rem;
-  height: 7rem;
+  width: 5rem;
+  height: 5rem;
 }
 
-.countdown__timer-body .timer--text {
+.countdown__timer-body span {
   font-size: 1rem;
 }
 
