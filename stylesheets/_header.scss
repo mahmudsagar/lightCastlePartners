@@ -1,0 +1,43 @@
+.header {
+    background: url("../../images/Background.png") no-repeat;
+    // top contact section
+    .contact {
+        padding: 1rem 2rem;
+        grid-template-columns: 2fr 1fr;
+        font-size: $font-sm;
+        color: $clr-grey-5;
+        @include breakpoint-down(ex-small) {
+            grid-template-columns: none;
+            text-align: center;
+        }
+        &__info {
+            span {
+                @include breakpoint-down(ex-small) {
+                    display: block;
+                }
+                padding: 0.7rem;
+            }
+        }
+        &__btn {
+            padding: 0.5rem 2rem;
+            justify-self: end;
+            border: 1px solid $clr-grey-5;
+            transition: all ease-in 300ms;
+            font-weight: 700;
+            color: $geryisWhite;
+            
+            @include breakpoint-down(ex-small) {
+                width: 100%;
+                justify-self: center;
+                text-align: center;
+            }
+            &:hover {
+                background-color: $redishBrown;
+                color: $clr-grey-6;
+            }
+        }
+    }
+    @import 'nav';
+    @import 'hero';
+    
+}

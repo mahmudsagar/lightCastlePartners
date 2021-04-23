@@ -1,0 +1,9 @@
+.hero{
+    &__container{
+        position: relative;
+    }
+    &__text-body{
+        color: $clr-grey-1;
+        
+    }
+}

@@ -2,6 +2,67 @@ const body = document.querySelector("body");
 const currentDate = new Date();
 const currentyear = currentDate.getFullYear();
 
+// mobile sidenav
+
+const navToggle = document.querySelector(".nav__menu-btn");
+const linksContainer = document.querySelector(".sidenav");
+const close = document.querySelector(".sidenav__close");
+navToggle.addEventListener("click", () => {
+    linksContainer.classList.toggle("show-sidenav");
+});
+close.addEventListener("click", () => {
+    linksContainer.classList.remove("show-sidenav");
+});
+
+// show search form
+
+const searchBtn = document.querySelector(".nav__search-container");
+const closeSearchBox = document.querySelector(".search_close");
+const searchBox = document.querySelector(".search-form");
+const searchBoxInput = document.querySelector(".search-form input");
+const searchResult = document.querySelector(".search-result");
+searchBtn.addEventListener("click", () => {
+    searchBox.classList.add("show-search-form");
+});
+closeSearchBox.addEventListener("click", () => {
+    searchBox.classList.remove("show-search-form");
+    searchResult.style.display = "none";
+});
+console.log(searchBoxInput);
+searchBoxInput.addEventListener("input", () => {
+    searchResult.style.display = "grid";
+});
+// search result container
+
+// fixed nav bar
+const navbar = document.getElementById("nav");
+const contact = document.querySelector(".contact");
+const navHeight = navbar.getBoundingClientRect().height;
+
+window.addEventListener("scroll", () => {
+    const scrollHeight = window.pageYOffset;
+    if (scrollHeight > navHeight) {
+        navbar.classList.remove("container");
+        navbar.classList.add("fixed-nav");
+    } else {
+        navbar.classList.remove("fixed-nav");
+        navbar.classList.add("container");
+    }
+    if (screen.width <= 425) {
+        navbar.classList.remove("container");
+        navbar.classList.add("fixed-nav");
+        contact.style.display = "none";
+    }
+});
+
+window.addEventListener("load", () => {
+    if (screen.width <= 425) {
+        navbar.classList.remove("container");
+        navbar.classList.add("fixed-nav");
+        contact.style.display = "none";
+    }
+});
+
 // count up start
 const count = document.querySelectorAll(".stat-count");
 const countUp = (item, start, end, duration) => {
@@ -26,24 +87,24 @@ count.forEach((item) => {
 
 // services section starts
 // tabs functionality
-const btns = document.querySelectorAll('.tab-btn')
-const about = document.querySelector('.services__container')
-const articles = document.querySelectorAll('.content')
+const btns = document.querySelectorAll(".tab-btn");
+const about = document.querySelector(".services__container");
+const articles = document.querySelectorAll(".content");
 
-about.addEventListener('click', (e)=>{
-    const id = e.target.dataset.id
-    if (id){
-        btns.forEach((btn)=>{
-            btn.classList.remove('active')
-            e.target.classList.add('active')
-        })
-        articles.forEach((article)=>{
-            article.classList.remove('active')
-        })
-        const element = document.getElementById(id)
-        element.classList.add('active')
+about.addEventListener("click", (e) => {
+    const id = e.target.dataset.id;
+    if (id) {
+        btns.forEach((btn) => {
+            btn.classList.remove("active");
+            e.target.classList.add("active");
+        });
+        articles.forEach((article) => {
+            article.classList.remove("active");
+        });
+        const element = document.getElementById(id);
+        element.classList.add("active");
     }
-})
+});
 
 // services section ends
 

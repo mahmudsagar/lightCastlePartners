@@ -30,9 +30,9 @@
     <body>
         <!-- header dection start -->
         <header id="header" class="header">
-            <div class="container">
+            <div class="container--px container--pb">
                 <!-- navigation section start -->
-                <div class="contact">
+                <div class="container d-grid d-grid-ai-c contact">
                     <!-- contact information -->
                     <div class="contact__info">
                         <span>
@@ -48,67 +48,126 @@
                     <!-- contact buttton -->
                     <a href="" class="btn contact__btn">get in touch</a>
                 </div>
-                <nav id="nav" class="nav">
-                    <!-- navigation brand/Logo -->
-                    <div class="nav__brand">
-                        <img
-                            src="./images/lcp-logo-web.svg"
-                            alt="lightcastlebd"
-                        />
+                <nav id="nav" class="container nav">
+                    <div class="d-grid d-grid-ji-c d-grid-ai-c nav__wrap">
+                        <!-- navigation brand/Logo -->
+                        <div class="nav__brand">
+                            <a href="">
+                                <img
+                                    src="./images/lcp-logo-web.svg"
+                                    alt="lightcastlebd"
+                                />
+                            </a>
+                        </div>
+
+                        <!-- menu links -->
+                        <ul class="nav__menu">
+                            <li class="nav__items">
+                                <a href="" class="nav__links">about</a>
+                            </li>
+                            <li class="nav__items">
+                                <a href="" class="nav__links">services</a>
+                            </li>
+                            <li class="nav__items">
+                                <a href="" class="nav__links">industries</a>
+                            </li>
+                            <li class="nav__items">
+                                <a href="" class="nav__links">insights</a>
+                            </li>
+                            <li class="nav__items">
+                                <a href="" class="nav__links">team</a>
+                            </li>
+                        </ul>
+                        <!-- HamburgerIcon -->
+                        <button class="nav__menu-btn">
+                            <i class="bi bi-justify"></i>
+                        </button>
+
+                        <!-- Search Box -->
+                        <div class="nav__search-container">
+                            <i class="bi bi-search"></i>
+                            <span>search keywords</span>
+                        </div>
                     </div>
-
-                    <!-- menu links -->
-                    <ul class="nav__menu">
-                        <li class="nav__items">
-                            <a href="" class="nav__links"></a>
-                        </li>
-                        <li class="nav__items">
-                            <a href="" class="nav__links"></a>
-                        </li>
-                        <li class="nav__items">
-                            <a href="" class="nav__links"></a>
-                        </li>
-                        <li class="nav__items">
-                            <a href="" class="nav__links"></a>
-                        </li>
-                        <li class="nav__items">
-                            <a href="" class="nav__links"></a>
-                        </li>
-                    </ul>
-
-                    <!-- Search Box -->
-                    <div class="nav__search-container">
-                        <i class="bi bi-search"></i>
+                    <form action="" method="post" class="search-form">
                         <input
                             type="text"
                             name="search"
                             id="search"
-                            class="nav__search"
+                            placeholder="search keyword"
                         />
+                        <button><i class="bi bi-search"></i></button>
+                        <i class="bi bi-x search_close"></i>
+                    </form>
+                    <div class="search-result">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Dolorem, accusamus!
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Dolorem, accusamus!
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Dolorem, accusamus!
+                        </p>
+                    </div>
+                </nav>
+
+                <!-- modile sidenav start -->
+                <aside class="sidenav">
+                    <!-- navigation brand/Logo -->
+                    <div class="sidenav__brand">
+                        <a href="">
+                            <img
+                                src="./images/lcp-logo-web.svg"
+                                alt="lightcastlebd"
+                            />
+                        </a>
                     </div>
 
-                    <!-- HamburgerIcon -->
-                    <button class="nav__menu-btn">
-                        <i class="bi bi-justify"></i>
-                    </button>
-                </nav>
+                    <!-- menu links -->
+                    <ul class="d-grid sidenav__menu">
+                        <li class="sidenav__items">
+                            <a href="" class="sidenav__links">about</a>
+                        </li>
+                        <li class="sidenav__items">
+                            <a href="" class="sidenav__links">services</a>
+                        </li>
+                        <li class="sidenav__items">
+                            <a href="" class="sidenav__links">industries</a>
+                        </li>
+                        <li class="sidenav__items">
+                            <a href="" class="sidenav__links">insights</a>
+                        </li>
+                        <li class="sidenav__items">
+                            <a href="" class="sidenav__links">team</a>
+                        </li>
+                    </ul>
+
+                    <!-- close btn -->
+                    <div class="sidenav__close">
+                        <i class="bi bi-x"></i>
+                    </div>
+                </aside>
+                <!-- modile sidenav ends -->
+
                 <!-- navigation section end -->
 
                 <!-- hero slider section start -->
                 <section class="hero">
-                    <div class="hero__slider">
-                        <div class="slides">
-                            <div class="slides__text-body">
-                                <h2>Bangladesh’s Stimulus Package</h2>
-                                <p>Can it stand against COVID-19?</p>
-                                <div class="slides__btn-container">
-                                    <button class="btn slides__btn">
-                                        read article
-                                    </button>
-                                    <button class="btn slides__btn">
-                                        covid-19 series
-                                    </button>
-                                </div>
+                    <div class="hero__container">
+                        <div class="hero__text-body">
+                            <h2>Bangladesh’s Stimulus Package</h2>
+                            <p>Can it stand against COVID-19?</p>
+                            <div class="slides__btn-container">
+                                <button class="btn slides__btn">
+                                    read article
+                                </button>
+                                <button class="btn slides__btn">
+                                    covid-19 series
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -210,7 +269,9 @@
                         <button class="tab-btn" data-id="accelerator">
                             accelerator & investment
                         </button>
-                        <button class="tab-btn" data-id="digital">digital</button>
+                        <button class="tab-btn" data-id="digital">
+                            digital
+                        </button>
                     </div>
                     <!-- tab content container -->
                     <article class="services__about-content">
@@ -219,13 +280,19 @@
                             <div class="content__body">
                                 <div class="timeline-body">
                                     <div class="timeline__heading">
-                                        <img src="https://via.placeholder.com/50" alt="">
+                                        <img
+                                            src="https://via.placeholder.com/50"
+                                            alt=""
+                                        />
                                         <p>private enterprise</p>
                                     </div>
                                     <div class="timeline">
                                         <div class="timeline_container right">
                                             <div class="timeline__content">
-                                                <p>Lorem ipsum dolor sit amet. Lorem, ipsum dolor.</p>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet.
+                                                    Lorem, ipsum dolor.
+                                                </p>
                                             </div>
                                         </div>
                                         <div class="timeline_container right">
@@ -235,25 +302,36 @@
                                         </div>
                                         <div class="timeline_container right">
                                             <div class="timeline__content">
-                                                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet
+                                                    consectetur.
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="timeline-body">
                                     <div class="timeline__heading">
-                                        <img src="https://via.placeholder.com/50" alt="">
+                                        <img
+                                            src="https://via.placeholder.com/50"
+                                            alt=""
+                                        />
                                         <p>development enterprise</p>
                                     </div>
                                     <div class="timeline">
                                         <div class="timeline_container right">
                                             <div class="timeline__content">
-                                                <p>Lorem ipsum dolor sit amet.</p>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet.
+                                                </p>
                                             </div>
                                         </div>
                                         <div class="timeline_container right">
                                             <div class="timeline__content">
-                                                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet
+                                                    consectetur.
+                                                </p>
                                             </div>
                                         </div>
                                         <div class="timeline_container right">
@@ -263,7 +341,9 @@
                                         </div>
                                         <div class="timeline_container right">
                                             <div class="timeline__content">
-                                                <p>Lorem ipsum dolor sit amet.</p>
+                                                <p>
+                                                    Lorem ipsum dolor sit amet.
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -274,15 +354,24 @@
                         <div class="content" id="accelerator">
                             <div class="content__body">
                                 <div class="timeline__heading">
-                                    <img src="https://via.placeholder.com/50" alt="">
+                                    <img
+                                        src="https://via.placeholder.com/50"
+                                        alt=""
+                                    />
                                     <p>private enterprise</p>
                                 </div>
                                 <div class="timeline__heading">
-                                    <img src="https://via.placeholder.com/50" alt="">
+                                    <img
+                                        src="https://via.placeholder.com/50"
+                                        alt=""
+                                    />
                                     <p>private enterprise</p>
                                 </div>
                                 <div class="timeline__heading">
-                                    <img src="https://via.placeholder.com/50" alt="">
+                                    <img
+                                        src="https://via.placeholder.com/50"
+                                        alt=""
+                                    />
                                     <p>private enterprise</p>
                                 </div>
                             </div>
@@ -291,11 +380,17 @@
                         <div class="content" id="digital">
                             <div class="content__body">
                                 <div class="timeline__heading">
-                                    <img src="https://via.placeholder.com/50" alt="">
+                                    <img
+                                        src="https://via.placeholder.com/50"
+                                        alt=""
+                                    />
                                     <p>private enterprise</p>
                                 </div>
                                 <div class="timeline__heading">
-                                    <img src="https://via.placeholder.com/50" alt="">
+                                    <img
+                                        src="https://via.placeholder.com/50"
+                                        alt=""
+                                    />
                                     <p>private enterprise</p>
                                 </div>
                             </div>

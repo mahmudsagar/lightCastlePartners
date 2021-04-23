@@ -45,7 +45,10 @@
             padding: 1rem;
             &__body {
                 display: grid;
-                grid-auto-flow: column;
+                grid-template-columns: repeat(3,auto);
+                @include breakpoint-down(ex-small){
+                    grid-template-columns: none;
+                }
                 .timeline-body{
                     display: grid;
                     justify-items: center;

@@ -1,0 +1,192 @@
+// main navbar section
+.nav {
+    background: $white;
+    transition: all ease-in-out 1000ms;
+    position: relative;
+    @include breakpoint-down(ex-small) {
+        width: 100% !important;
+    }
+    &__wrap {
+        max-width: 90rem;
+        margin: auto;
+        grid-template-columns: 1fr 2fr 1fr;
+        align-items: center;
+        @include breakpoint-down(small) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+    &__brand {
+        justify-self: start;
+        margin-left: 2rem;
+        padding: 0.5rem 0.8rem;
+        img {
+            width: 160px;
+            height: 80%;
+        }
+    }
+    &__menu {
+        @include breakpoint-down(small) {
+            display: none;
+        }
+    }
+    &__links {
+        color: $clr-grey-1;
+        text-transform: capitalize;
+        font-size: $font-med;
+        font-weight: 600;
+        padding: 1rem;
+        transition: all ease-in-out 300ms;
+        &:hover {
+            border-bottom: 3px solid $redishBrown;
+            color: $redishBrown;
+        }
+    }
+    &__search-container {
+        text-transform: capitalize;
+        cursor: pointer;
+        justify-self: end;
+        margin-right: 2rem;
+        @include breakpoint-down(ex-small) {
+            justify-self: center;
+        }
+        &:hover {
+            color: $blue;
+        }
+        span {
+            @include breakpoint-down(ex-small) {
+                display: none;
+            }
+        }
+    }
+    &__menu-btn {
+        display: none;
+        font-size: $font-lg;
+        @include breakpoint-down(small) {
+            display: block;
+        }
+    }
+    // hamburger icon
+    .search-form {
+        position: absolute;
+        background-color: $white;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 4fr 1fr 1fr;
+        align-items: center;
+        opacity: 0;
+        transform: translateX(101%);
+        padding-left: 1.5rem;
+        transition: all ease-in-out 500ms;
+        input {
+            border: 1px solid $clr-grey-3;
+            border-radius: 0.5rem 0 0 0.5rem;
+            padding: 1rem;
+        }
+        button {
+            font-size: 1.5rem;
+            justify-self: start;
+            color: $clr-grey-6;
+            padding: 0.65rem 1rem;
+            background: $clr-grey-3;
+            border-radius: 0 0.5rem 0.5rem 0;
+        }
+        .search_close {
+            justify-self: center;
+            font-size: 1.5rem;
+            background-color: $redishBrown;
+            padding: 0.65rem 1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            color: $clr-grey-6;
+        }
+    }
+    // search form
+    .show-search-form {
+        transform: none;
+        opacity: 1;
+    }
+    // search result
+    .search-result {
+        position: absolute;
+        background-color: $clr-grey-4;
+        width: 100%;
+        padding: 1.2rem;
+        border-radius: 0 0 0.5rem 0.5rem;
+        display: grid;
+        justify-items: center;
+        display: none;
+    }
+}
+// main nav position fixed
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $white;
+    z-index: 1;
+    @include breakpoint-down(ex-small) {
+        .nav__wrap {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+}
+// sidebar section
+.sidenav {
+    grid-template-rows: 1fr 1fr 1fr;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    max-width: 270px;
+    background-color: $white;
+    width: 90%;
+    z-index: 20;
+    transform: translateX(-120rem);
+    opacity: 0;
+    transition: all ease-in-out 600ms;
+    padding: 3rem 1rem;
+    &__brand {
+        width: 160px;
+        margin: 0 auto;
+    }
+    &__items {
+        border-bottom: 1px solid $darkGrey;
+        padding: 1rem 0;
+        &:hover {
+            background-color: $redishBrown;
+            a {
+                color: $geryisWhite;
+            }
+        }
+        &:nth-child(1) {
+            border-top: 1px solid $darkGrey;
+        }
+    }
+    &__links {
+        text-transform: capitalize;
+        color: $blue;
+        width: 100%;
+        padding: 1rem 0;
+        padding-left: 1.5rem;
+        padding-right: 5rem;
+    }
+    &__close {
+        position: absolute;
+        top: 0.5rem;
+        right: -3rem;
+        cursor: pointer;
+        i {
+            background-color: $blue;
+            padding: 0.5rem;
+            color: $white;
+            font-size: 2rem;
+        }
+    }
+}
+.show-sidenav {
+    transform: none;
+    opacity: 1;
+}

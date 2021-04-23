@@ -96,6 +96,7 @@
         width: 5rem;
         height: 5rem;
         h4 {
+            margin: 1rem 0;
             @include breakpoint-down(ex-small) {
                 margin: 5px 0;
             }

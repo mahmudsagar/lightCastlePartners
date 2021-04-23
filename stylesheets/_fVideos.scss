@@ -61,8 +61,8 @@
                     position: absolute;
                     top: 50%;
                     left: 50%;
-                    transform: translate(-50%, 50%);
-                    font-size: 1.3rem;
+                    transform: translate(-50%, -50%);
+                    font-size: $font-xlg;
                     &::before {
                         animation: pulse-border 1500ms ease-out infinite;
                     }
