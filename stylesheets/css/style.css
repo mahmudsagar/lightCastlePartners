@@ -245,6 +245,7 @@ button,
 .header {
   position: relative;
   background: url("../../images/Background.png") no-repeat;
+  background-size: cover;
 }
 
 .header .contact {
@@ -469,7 +470,8 @@ button,
   left: 0;
   width: 100%;
   background-color: white;
-  z-index: 1;
+  padding: 1rem 1.5rem;
+  z-index: 999999;
 }
 
 @media (max-width: 28.125rem) {
@@ -555,7 +557,7 @@ button,
 }
 
 .header .hero__container::after {
-  content: '';
+  content: "";
   width: 21rem;
   height: 21rem;
   display: block;
@@ -597,10 +599,10 @@ button,
 
 .header .hero__btn {
   color: #dae2ec;
-  padding: .8rem 1.125rem;
+  padding: 0.8rem 1.125rem;
   border: 1px solid #9eb2c7;
-  -webkit-transition: all ease .3s;
-  transition: all ease .3s;
+  -webkit-transition: all ease 0.3s;
+  transition: all ease 0.3s;
 }
 
 .header .hero__btn:hover {
@@ -632,7 +634,13 @@ button,
   padding: 3rem 5rem;
   display: inline-block;
   color: #f1f5f8;
+  font-size: 1.25rem;
   background-color: #6f6b67;
+}
+
+.header .hero__page-map-btn:hover {
+  background-color: #bcccdc;
+  color: #2e2929;
 }
 
 .aboutLCPartners {

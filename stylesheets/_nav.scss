@@ -126,7 +126,8 @@
     left: 0;
     width: 100%;
     background-color: $white;
-    z-index: 1;
+padding: 1rem 1.5rem;
+    z-index: 999999;
     @include breakpoint-down(ex-small) {
         .nav__wrap {
             grid-template-columns: 1fr 1fr 1fr;

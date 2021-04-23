@@ -1,13 +1,13 @@
 .hero {
-    &__container{
+    &__container {
         position: relative;
         margin-bottom: 5rem;
-        &::after{
-            content: '';
+        &::after {
+            content: "";
             width: 21rem;
             height: 21rem;
             display: block;
-            background: url('../../images/Landing-Banner-1-100x50.jpg');
+            background: url("../../images/Landing-Banner-1-100x50.jpg");
             background-repeat: no-repeat;
             background-position: top;
             background-size: cover;
@@ -32,7 +32,7 @@
         }
     }
 
-    &__btn-container{
+    &__btn-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 3rem;
@@ -41,34 +41,39 @@
 
     &__btn {
         color: $clr-grey-5;
-        padding: .8rem 1.125rem;
-        border: 1px solid  $clr-grey-3;
-        transition: all ease .3s;
-        &:hover{
+        padding: 0.8rem 1.125rem;
+        border: 1px solid $clr-grey-3;
+        transition: all ease 0.3s;
+        &:hover {
             background-color: $clr-grey-2;
             color: $clr-grey-5;
             border: 1px solid $redishBrown;
         }
     }
 
-    &__page-map{
+    &__page-map {
         position: absolute;
         bottom: 0;
         left: 50%;
         width: 100%;
         transform: translateX(-50%);
     }
-    &__page-map-container{
+    &__page-map-container {
         text-align: center;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         max-width: 90rem;
         margin: auto;
     }
-    &__page-map-btn{
+    &__page-map-btn {
         padding: 3rem 5rem;
         display: inline-block;
         color: $clr-grey-6;
+        font-size: $font-lg;
         background-color: $lightGrey;
+        &:hover {
+            background-color: $clr-grey-4;
+            color: $darkGrey;
+        }
     }
 }
