@@ -2,7 +2,7 @@ const body = document.querySelector("body");
 const currentDate = new Date();
 const currentyear = currentDate.getFullYear();
 
-// count up function
+// count up start
 const count = document.querySelectorAll(".stat-count");
 const countUp = (item, start, end, duration) => {
     if (start == end) return;
@@ -22,7 +22,32 @@ count.forEach((item) => {
     countUp(item, 0, value, 10000);
 });
 
-// video section
+// count up ends
+
+// services section starts
+// tabs functionality
+const btns = document.querySelectorAll('.tab-btn')
+const about = document.querySelector('.services__container')
+const articles = document.querySelectorAll('.content')
+
+about.addEventListener('click', (e)=>{
+    const id = e.target.dataset.id
+    if (id){
+        btns.forEach((btn)=>{
+            btn.classList.remove('active')
+            e.target.classList.add('active')
+        })
+        articles.forEach((article)=>{
+            article.classList.remove('active')
+        })
+        const element = document.getElementById(id)
+        element.classList.add('active')
+    }
+})
+
+// services section ends
+
+// video section start
 const video = document.querySelectorAll(".video");
 const videoBtn = document.querySelectorAll(".image-overlay");
 const videoCloseBtn = document.querySelectorAll(".video-close");
