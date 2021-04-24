@@ -301,8 +301,8 @@ button,
 
 .header .nav {
   background: white;
-  -webkit-transition: all ease-in-out 1000ms;
-  transition: all ease-in-out 1000ms;
+  -webkit-transition: all ease-in-out 500ms;
+  transition: all ease-in-out 500ms;
   position: relative;
 }
 

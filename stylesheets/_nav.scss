@@ -1,7 +1,7 @@
 // main navbar section
 .nav {
     background: $white;
-    transition: all ease-in-out 1000ms;
+    transition: all ease-in-out 500ms;
     position: relative;
     @include breakpoint-down(ex-small) {
         width: 100% !important;
