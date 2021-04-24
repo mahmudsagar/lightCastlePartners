@@ -644,7 +644,7 @@ button,
 }
 
 .aboutLCPartners {
-  background: rgba(227, 120, 53, 0.575);
+  background: rgba(0, 116, 189, 0.247);
 }
 
 .aboutLCPartners__container {
@@ -852,128 +852,62 @@ button,
   left: 50%;
 }
 
+.clients {
+  background-color: rgba(227, 120, 53, 0.575);
+}
+
 .clients__container {
-  width: 100%;
-  height: auto;
+  overflow: hidden;
+  padding: 60px;
+  position: relative;
 }
 
 .clients__slider {
-  height: 300px;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-family: "Ubuntu", sans-serif;
-  text-align: center;
-  color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .clients__slide {
-  height: 165px;
-  width: 200px;
-  background: gray;
-  display: none;
-  padding-top: 100px;
-  font-size: 50px;
-  z-index: 2;
-  border-radius: 2px;
-  padding-top: 100px;
-  -webkit-box-shadow: 0px 15px 10px -10px lightgray;
-          box-shadow: 0px 15px 10px -10px lightgray;
+  margin-right: 10rem;
 }
 
-.clients__slide:nth-child(1) {
-  display: block;
+.clients__slide img {
+  width: 150px;
+  height: 150px;
 }
 
-.clients__slide:nth-child(even) {
-  background: orange;
+.clients .active {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  background-color: #e37835;
 }
 
-.clients__slide:nth-child(odd) {
-  background-color: coral;
+.clients .active img {
+  border: 5px solid #617d98;
 }
 
-.clients .indicators {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  height: 20px;
-  margin: 20px auto 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.clients__slider-controller button {
+  font-size: 3.25rem;
 }
 
-.clients .indicators .indicator {
-  background: darkgray;
-  height: 10px;
-  width: 10px;
-  margin: 2px;
-  border-radius: 50%;
-}
-
-.clients .indicators .indicator:nth-child(1) {
-  background: dimgray;
-}
-
-.clients .prev,
-.clients .next {
+.clients__slider-controller #next-btn {
   position: absolute;
-  font-size: 20px;
-  border: none;
-  padding: 15px 5px;
-  color: white;
-  background-color: #1f1f1f;
-  cursor: pointer;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
-.clients .prev:focus,
-.clients .next:focus {
-  outline: none;
-}
-
-.clients .prev:hover,
-.clients .next:hover {
-  background: powderblue;
-}
-
-.clients .next {
-  display: block;
-  right: 5px;
-  top: 150px;
-}
-
-.clients .prev {
-  display: block;
-  left: 5px;
-  top: 150px;
-}
-
-.clients .before,
-.clients .after {
+.clients__slider-controller #prev-btn {
   position: absolute;
-  display: block;
-  height: 165px;
-  width: 200px;
-  padding-top: 100px;
-  background: darkgray;
-  border-radius: 2px;
-  font-size: 40px;
-  -webkit-box-shadow: 0px 15px 10px -10px lightgray;
-          box-shadow: 0px 15px 10px -10px lightgray;
-  margin-top: 20px;
-}
-
-.clients .before {
-  margin-left: -250px;
-}
-
-.clients .after {
-  margin-left: 320px;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .insight__container {
@@ -1194,7 +1128,7 @@ button,
 }
 
 .fVideos__card .open-video {
-  z-index: 1111;
+  z-index: 9999999999999;
   opacity: 1;
 }
 

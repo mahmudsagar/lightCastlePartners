@@ -1,99 +1,43 @@
 .clients {
+    background-color: $lightRedishBrown;
     &__container {
-        width: 100%;
-        height: auto;
+        overflow: hidden;
+        padding: 60px;
+        position: relative;
     }
     &__slider {
-        height: 300px;
-        width: max-content;
-        margin: auto;
         display: flex;
-        font-family: "Ubuntu", sans-serif;
-        text-align: center;
-        color: white;
+        align-items: center;
     }
     &__slide {
-        height: 165px;
-        width: 200px;
-        background: gray;
-        display: none;
-        padding-top: 100px;
-        font-size: 50px;
-        z-index: 2;
-        border-radius: 2px;
-        padding-top: 100px;
-        box-shadow: 0px 15px 10px -10px lightgray;
+        margin-right: 10rem;
+        img {
+            width: 150px;
+            height: 150px;
+        }
     }
-    &__slide:nth-child(1) {
-        display: block;
+    .active {
+        transform: scale(1.5);
+        background-color: $redishBrown;
+        img {
+            border: 5px solid $clr-grey-1;
+        }
     }
-    &__slide:nth-child(even) {
-        background: orange;
-    }
-    &__slide:nth-child(odd) {
-        background-color: coral;
-    }
-    .indicators {
-        width: max-content;
-        height: 20px;
-        margin: 20px auto 0px;
-        display: flex;
-    }
-    .indicators .indicator {
-        background: darkgray;
-        height: 10px;
-        width: 10px;
-        margin: 2px;
-        border-radius: 50%;
-    }
-    .indicators .indicator:nth-child(1) {
-        background: dimgray;
-    }
-    .prev,
-    .next {
-        position: absolute;
-        font-size: 20px;
-        border: none;
-        padding: 15px 5px;
-        color: white;
-        background-color: #1f1f1f;
-        cursor: pointer;
-    }
-    .prev:focus,
-    .next:focus {
-        outline: none;
-    }
-    .prev:hover,
-    .next:hover {
-        background: powderblue;
-    }
-    .next {
-        display: block;
-        right: 5px;
-        top: 150px;
-    }
-    .prev {
-        display: block;
-        left: 5px;
-        top: 150px;
-    }
-    .before,
-    .after {
-        position: absolute;
-        display: block;
-        height: 165px;
-        width: 200px;
-        padding-top: 100px;
-        background: darkgray;
-        border-radius: 2px;
-        font-size: 40px;
-        box-shadow: 0px 15px 10px -10px lightgray;
-        margin-top: 20px;
-    }
-    .before {
-        margin-left: -250px;
-    }
-    .after {
-        margin-left: 320px;
+    &__slider-controller {
+        button{
+            font-size: $font-xlg;
+        }
+        #next-btn {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+        #prev-btn {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
     }
 }
