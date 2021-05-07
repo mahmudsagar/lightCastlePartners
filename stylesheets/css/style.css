@@ -553,7 +553,7 @@ button,
 
 .header .hero__container {
   position: relative;
-  margin-bottom: 5rem;
+  margin-bottom: 10rem;
 }
 
 .header .hero__container::after {
@@ -576,12 +576,6 @@ button,
   }
 }
 
-@media (max-width: 48rem) {
-  .header .hero__container {
-    margin-bottom: 10rem;
-  }
-}
-
 @media (max-width: 34.25rem) {
   .header .hero__container {
     margin-bottom: 20rem;
@@ -598,6 +592,7 @@ button,
   .header .hero__text-body {
     padding: 0;
     margin: 2rem auto;
+    width: 100%;
   }
 }
 
@@ -627,6 +622,7 @@ button,
     -ms-grid-columns: none;
         grid-template-columns: none;
     grid-gap: 1rem;
+    width: 10rem;
   }
 }
 
@@ -657,16 +653,17 @@ button,
   text-align: center;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (minmax(240px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   max-width: 90rem;
   margin: auto;
 }
 
 @media (max-width: 34.25rem) {
   .header .hero__page-map-container {
-    -ms-grid-columns: none;
-        grid-template-columns: none;
+    -ms-grid-columns: none !important;
+        grid-template-columns: none !important;
+    width: 100%;
   }
 }
 
@@ -763,6 +760,13 @@ button,
       grid-template-rows: auto 1fr;
 }
 
+@media (max-width: 34.25rem) {
+  .services__container {
+    -ms-grid-columns: 1fr auto;
+        grid-template-columns: 1fr auto;
+  }
+}
+
 .services__btn-container {
   display: -ms-grid;
   display: grid;
@@ -770,10 +774,24 @@ button,
       grid-template-columns: 1fr 1fr 1fr;
 }
 
+@media (max-width: 34.25rem) {
+  .services__btn-container {
+    -ms-grid-columns: none;
+        grid-template-columns: none;
+  }
+}
+
 .services__btn-container .active {
   background-color: white !important;
   border-bottom: 5px solid #617d98;
   color: #617d98;
+}
+
+@media (max-width: 34.25rem) {
+  .services__btn-container .active {
+    border-bottom: 0;
+    border-right: 5px solid #617d98;
+  }
 }
 
 .services__btn-container .tab-btn {
@@ -797,6 +815,13 @@ button,
 
 .services__btn-container .tab-btn:nth-child(3) {
   border-top-right-radius: 0.5rem;
+}
+
+@media (max-width: 34.25rem) {
+  .services__btn-container .tab-btn:nth-child(3) {
+    border-top-right-radius: 0rem;
+    border-bottom-left-radius: 0.5rem;
+  }
 }
 
 .services__about-content .active {
@@ -862,11 +887,23 @@ button,
   margin-left: -3px;
 }
 
+@media (max-width: 34.25rem) {
+  .services__about-content .content__body .timeline::after {
+    left: 0;
+  }
+}
+
 .services__about-content .content__body .timeline_container {
   padding: 10px 40px;
   position: relative;
   background-color: inherit;
   width: 50%;
+}
+
+@media (max-width: 34.25rem) {
+  .services__about-content .content__body .timeline_container {
+    width: 100%;
+  }
 }
 
 .services__about-content .content__body .timeline_container::after {
@@ -890,6 +927,12 @@ button,
 
 .services__about-content .content__body .timeline .right {
   left: 50%;
+}
+
+@media (max-width: 34.25rem) {
+  .services__about-content .content__body .timeline .right {
+    left: 0;
+  }
 }
 
 .clients {
