@@ -14,18 +14,28 @@
             position: absolute;
             top: 10%;
             right: 10%;
-            @include breakpoint-down(ex-small) {
+            @include breakpoint-down(small) {
                 display: none !important;
             }
+        }
+        @include breakpoint-down(small) {
+            margin-bottom: 10rem;
+        }
+        @include breakpoint-down(ex-small) {
+            margin-bottom: 20rem;
         }
     }
     &__text-body {
         color: $geryisWhite;
-        width: 30rem;
+        width: clamp(45ch, 30rem, 75ch);
         padding: 2rem;
+        @include breakpoint-down(ex-small) {
+            padding: 0;
+            margin: 2rem auto;
+        }
         h2 {
             margin: 0;
-            font-size: 3rem;
+            font-size: clamp(1.5rem, 3rem, 3.1rem);
             font-weight: 800;
         }
         p {
@@ -40,6 +50,10 @@
         grid-template-columns: 1fr 1fr;
         grid-gap: 3rem;
         margin-top: 3rem;
+        @include breakpoint-down(ex-small) {
+            grid-template-columns: none;
+            grid-gap: 1rem;
+        }
     }
 
     &__btn {
@@ -67,6 +81,9 @@
         grid-template-columns: repeat(3, 1fr);
         max-width: 90rem;
         margin: auto;
+        @include breakpoint-down(ex-small) {
+            grid-template-columns: none;
+        }
     }
     &__page-map-btn {
         padding: 3rem 5rem;
