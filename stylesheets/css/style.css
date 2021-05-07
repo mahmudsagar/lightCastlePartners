@@ -570,6 +570,12 @@ button,
   right: 10%;
 }
 
+@media (max-width: 28.125rem) {
+  .header .hero__container::after {
+    display: none !important;
+  }
+}
+
 .header .hero__text-body {
   color: #f9f6f6;
   width: 30rem;

@@ -14,6 +14,9 @@
             position: absolute;
             top: 10%;
             right: 10%;
+            @include breakpoint-down(ex-small) {
+                display: none !important;
+            }
         }
     }
     &__text-body {
