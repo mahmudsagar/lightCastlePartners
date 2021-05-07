@@ -568,6 +568,7 @@ button,
   position: absolute;
   top: 10%;
   right: 10%;
+  margin: 2rem 0;
 }
 
 @media (max-width: 48rem) {
